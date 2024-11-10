@@ -1,6 +1,12 @@
 import os
 import time
 import random
+# Colores
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+RESET = "\033[0m"
 
 def clear_screen():
     if os.name == 'nt':  # Windows
@@ -11,7 +17,8 @@ def clear_screen():
 def victoria_derrota(vida):
     if vida > 0:
         clear_screen()
-        print("""888     888 d8b          888                              
+        print(f"""{GREEN}
+888     888 d8b          888                              
 888     888 Y8P          888                              
 888     888              888                              
 Y88b   d88P 888  .d8888b 888888  .d88b.  888d888 888  888 
@@ -21,10 +28,10 @@ Y88b   d88P 888  .d8888b 888888  .d88b.  888d888 888  888
     Y8P     888  "Y8888P  "Y888  "Y88P"  888      "Y88888 
                                                       888 
                                                  Y8b d88P 
-                                                  "Y88P" """)
+                                                  "Y88P" {RESET}""")
     else:
         clear_screen()
-        print("""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀
+        print(f"""{RED}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⠀⠀⠀⢀⣴⣿⡶⠀⣾⣿⣿⡿⠟⠛⠁
 ⠀⠀⠀⠀⠀⠀⣀⣀⣄⣀⠀⠀⠀⠀⣶⣶⣦⠀⠀⠀⠀⣼⣿⣿⡇⠀⣠⣿⣿⣿⠇⣸⣿⣿⣧⣤⠀⠀⠀
 ⠀⠀⢀⣴⣾⣿⡿⠿⠿⠿⠇⠀⠀⣸⣿⣿⣿⡆⠀⠀⢰⣿⣿⣿⣷⣼⣿⣿⣿⡿⢀⣿⣿⡿⠟⠛⠁⠀⠀
@@ -39,10 +46,10 @@ Y88b   d88P 888  .d8888b 888888  .d88b.  888d888 888  888
 ⠀⠀⠀⣴⣿⣿⠋⠀⠀⠀⢸⣿⣇⢹⣿⣷⣰⣿⣿⠃⠀⢠⣿⣿⢃⣀⣤⣤⣾⣿⡟⠀⠀⠀⢻⣿⣆⠀⠀
 ⠀⠀⠀⣿⣿⡇⠀⠀⢀⣴⣿⣿⡟⠀⣿⣿⣿⣿⠃⠀⠀⣾⣿⣿⡿⠿⠛⢛⣿⡟⠀⠀⠀⠀⠀⠻⠿⠀⠀
 ⠀⠀⠀⠹⣿⣿⣶⣾⣿⣿⣿⠟⠁⠀⠸⢿⣿⠇⠀⠀⠀⠛⠛⠁⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠈⠙⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")        
+⠀⠀⠀⠀⠈⠙⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀{RESET}""")        
 def pantalla_carga():
     
-    print("""
+    print(f"""{GREEN}
  .d8888b.                            888                  888     888                   888b     d888                            
 d88P  Y88b                           888                  888     888                   8888b   d8888                            
 888    888                           888                  888     888                   88888b.d88888                            
@@ -53,11 +60,11 @@ Y88b  d88P 888     Y8b.     888  888 Y88b.  Y8b.     Y88b 888     888 d88P Y88b 
  "Y8888P"  888      "Y8888  "Y888888  "Y888  "Y8888   "Y88888     88888P"   "Y88888     888       888 "Y888888 888  888  "Y88888 
                                                                                 888                                              
                                                                            Y8b d88P                                              
-                                                                            "Y88P"                                               """)
+                                                                            "Y88P"                                               {RESET}""")
     time.sleep(2)
     print("Cargando...")
     clear_screen()
-    print("""
+    print(f"""{YELLOW}
            d8888 888                                              888          
           d88888 888                                              888          
          d88P888 888                                              888          
@@ -65,12 +72,12 @@ Y88b  d88P 888     Y8b.     888  888 Y88b.  Y8b.     Y88b 888     888 d88P Y88b 
        d88P  888 888 "88b d88""88b 888P"   d88P"        "88b d88" 888 d88""88b 
       d88P   888 888  888 888  888 888     888      .d888888 888  888 888  888 
      d8888888888 888  888 Y88..88P 888     Y88b.    888  888 Y88b 888 Y88..88P 
-    d88P     888 888  888  "Y88P"  888      "Y8888P "Y888888  "Y88888  "Y88P" """)
+    d88P     888 888  888  "Y88P"  888      "Y8888P "Y888888  "Y88888  "Y88P" {RESET}""")
     time.sleep(2)
     clear_screen()
 def animacion(vida):      
     if vida == 5:
-        print("""
+        print(f"""{YELLOW}
                                         ________
                                        |/      |
                                        |       0
@@ -78,9 +85,9 @@ def animacion(vida):
                                        |      
                                        |     
                                        |
-                                      _|___""")
+                                      _|___{RESET}""")
     elif vida == 4:
-        print("""
+        print(f"""{YELLOW}
                                         ________
                                        |/      |
                                        |       0
@@ -88,9 +95,9 @@ def animacion(vida):
                                        |      
                                        |     
                                        |
-                                      _|___""")
+                                      _|___{RESET}""")
     elif vida == 3:
-        print("""
+        print(F"""{YELLOW}
                                         ________
                                        |/      |
                                        |       0
@@ -98,9 +105,9 @@ def animacion(vida):
                                        |      
                                        |     
                                        |
-                                      _|___""")
+                                      _|___{RESET}""")
     elif vida == 2:
-        print("""
+        print(f"""{YELLOW}
                                         ________
                                        |/      |
                                        |       0
@@ -108,9 +115,9 @@ def animacion(vida):
                                        |      
                                        |     
                                        |
-                                      _|___""")
+                                      _|___{RESET}""")
     elif vida == 1:
-        print("""
+        print(f"""{YELLOW}
                                         ________
                                        |/      |
                                        |       0
@@ -118,9 +125,9 @@ def animacion(vida):
                                        |      | 
                                        |     
                                        |
-                                      _|___""")
+                                      _|___{RESET}""")
     elif vida == 0:
-        print("""
+        print(f"""{YELLOW}
                                         ________
                                        |/      |
                                        |       0
@@ -128,7 +135,7 @@ def animacion(vida):
                                        |      | |
                                        |     
                                        |
-                                      _|___""")
+                                      _|___{RESET}""")
 def presentar():
     jugador = input("Seleccione el modo de juego, 1 jugador o 2 jugadores, 1/2: ")
     try:
@@ -140,13 +147,13 @@ def presentar():
         try:
             jugador = int(jugador)
         except:
-            print("Opcion no valida, selecciones 1 o 2")
+            print(f"{RED}Opcion no valida, selecciones 1 o 2{RESET}")
     if jugador == 1:
         ahorcado_1p()
     elif jugador ==2:
         ahorcado2()
     else:
-        print(":( Ah ocurrido un Error")
+        print(f"{RED}:( Ah ocurrido un Error{RESET}")
 def seleccionar_dificultad():
     dificultades = (1,2,3)
     dificultad = input("Selecciones una dificultad 1/2/3: ")
@@ -254,7 +261,7 @@ def jugar():
 #Bucle principal del juego
 while True:
     jugador = input("Jugar/Salir: ").lower()
-    if "jugar" in jugador or "juga" in jugador:
+    if "jugar" in jugador or "juga" in jugador or "play" in jugador:
         jugar()
-    elif "salir" in jugador or "sal" in jugador:
+    elif "salir" in jugador or "sal" in jugador or "exit" in jugador:
         break
