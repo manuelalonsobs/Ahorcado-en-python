@@ -1,4 +1,4 @@
-# Ahorcado-en-python
+# ahorcado-en-python
 Juego de Ahorcado en Python
 
 Este es un simple juego de ahorcado implementado en Python. El jugador debe adivinar una palabra oculta ingresando letras. El juego muestra la palabra con las letras adivinadas y permite al jugador seguir adivinando hasta que se agoten las vidas o se adivine la palabra completa.
@@ -18,6 +18,6 @@ Instrucciones de uso:
 
 Clona el repositorio o descarga el archivo ahorcado.py.
 Asegúrate de tener Python 3.x instalado en tu sistema.
-Ejecuta el archivo con el comando python ahorcado.py.
+Ejecuta el archivo con el comando python3 ahorcado.py o python ahorcado.py.
 Sigue las instrucciones en pantalla para jugar.
 Contribuciones: Las contribuciones son bienvenidas. Si deseas mejorar el juego o añadir nuevas características, siéntete libre de hacer un fork del repositorio y enviar un pull request.
